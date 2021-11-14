@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <script id="post" type="text/x-handlebars">
+    {{#each posts}}
+    <article>
+      <h1>{{title}}</h1>
+      <p><time>Posted on {{published}}</time></p>
+      {{{body}}}
+      {{#if tags}}
+      <p>
+        Tags:
+        {{#each tags}}
+        {{> tagsList}}
+        {{/each}}
+      </p>
+      {{else}}
+        <p>Not Tagged</p>
+      {{/if}}
+    </article>
+    {{/each}}
+  </script>
+  <script id="tags" type="text/x-handlebars">
+    <strong>{{this}}</strong>
+  </script>
+  <script>
+  let posts = [
+    { title: 'Lorem ipsum dolor sit amet',
+      published: 'April 1, 2015',
+      body: '<p>' + 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.' + '</p>',
+      tags: ['tech', 'handlebars', 'cool', 'tips'],
+    },
+    {
+      title: 'another post',
+      published: 'April 3, 2015',
+      body: '<p>' + 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.' + '</p>',
+    }
+
+  ]
+
+  let tagsList = Handlebars.compile($('#tags').html())
+  let postTemplate = Handlebars.compile($('#post').html());
+
+  Handlebars.registerPartial('tagsList', $('#tags').html());
+
+  $('body').append(postTemplate({ posts: posts }));
+  </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Form Practice 1</title>
+    <meta charset="utf-8" />
+    <style>
+      /* Eliminate margins and padding on everything */
+.styled-form * {
+  margin: 0;
+  padding: 0;
+}
+
+/* Grey box and default font for fieldsets */
+.styled-form fieldset {
+  background-color: #ececec;
+  border: 2px solid #999;
+  box-sizing: border-box;
+  color: #4d4d4d;
+  font-family:
+    myriad-pro, "Helvetica Neue", Helvetica, Roboto,
+    Arial, sans-serif;
+  padding: 1rem;
+}
+
+/* Custom appearance for labels */
+.styled-form label {
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+/* Custom appearance for input and select fields */
+.styled-form input[type="text"],
+.styled-form select {
+  border: 1px solid #06c;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font: normal 1rem Helvetica, Arial, sans-serif;
+  height: 40px;
+  padding: 5px 8px;
+}
+
+/* More customization for select lists */
+.styled-form select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image:
+    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+");
+  background-position: 100% center;
+  background-repeat: no-repeat;
+  padding-right: 1.5rem;
+}
+
+/* Add to end of file */
+.top-to-bottom label,
+.top-to-bottom input[type="text"] {
+  display: block;
+  width: 100%;
+}
+
+/* Add to end of file */
+.side-by-side label,
+.side-by-side input[type="text"] {
+  display: inline-block;
+}
+
+.side-by-side label {
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.side-by-side input[type="text"] {
+  width: 100%;
+}
+
+.side-by-side dl {
+  font-size: 0;
+}
+
+.side-by-side dt,
+.side-by-side dd {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.side-by-side dt {
+  padding-right: 1rem;
+  width: 25%;
+}
+
+.side-by-side dd {
+  width: 75%;
+}
+
+/* Add to end of file */
+.styled-form label {
+  padding-top: 0.3333rem;
+}
+
+.top-to-bottom dl.partial {
+  box-sizing: border-box;
+  display: inline-block;
+  padding-right: 1rem;
+  vertical-align: top;
+}
+
+.top-to-bottom dl.address {
+  width: 100%;
+}
+
+.top-to-bottom dl.city {
+  width: 50%;
+}
+
+.top-to-bottom dl.state {
+  width: 25%;
+}
+
+.top-to-bottom dl.zipcode {
+  padding-right: 0;
+  width: 25%;
+}
+
+.top-to-bottom dl dd {
+  width: auto;
+}
+
+.top-to-bottom fieldset,
+.top-to-bottom dl,
+.top-to-bottom dl dd,
+.top-to-bottom dl dt {
+  font-size: 0;
+}
+
+.top-to-bottom dl label,
+.top-to-bottom dl input[type="text"] {
+  font-size: 1rem;
+}
+
+.top-to-bottom select {
+  width: 100%;
+}
+
+    </style>
+  </head>
+  
+  <body>
+    <form action="#" class="styled-form top-to-bottom">
+      <fieldset>
+        <dl>
+          <dt><label for="name">Name</label></dt>
+          <dd><input type="text" id="name" /></dd>
+        </dl>
+    
+        <dl class="address">
+          <dt><label for="address1">Address</label></dt>
+          <dd>
+            <input type="text" id="address1" />
+            <input type="text" id="address2" />
+          </dd>
+        </dl>
+    
+        <dl class="city partial">
+          <dt><label for="city">City</label></dt>
+          <dd><input type="text" id="city" /></dd>
+        </dl>
+    
+        <dl class="state partial">
+          <dt><label for="state">State</label></dt>
+          <dd>
+            <select id="state">
+              <option>AK</option>
+              <option>AL</option>
+              <!-- You can download the complete list of states at -->
+              <!-- https://launchschool.com/gists/2424a869 -->
+            </select>
+          </dd>
+        </dl>
+    
+        <dl class="zipcode partial">
+          <dt><label for="zipcode">Zip</label></dt>
+          <dd><input type="text" id="zipcode" /></dd>
+        </dl>
+    
+      </fieldset>
+    </form>
+  </body>
+</html>

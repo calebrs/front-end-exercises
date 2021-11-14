@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Practice Form</title>
+    <meta charset="utf-8" />
+    <style>
+      label, input {
+        display: inline-block;
+      }
+
+      label {
+        margin-right: 1rem;
+        vertical-align: middle;
+      }
+
+      input[type="text"] {
+        vertical-align: middle;
+        width: 35%;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <form action="#" method="post">
+      <fieldset>
+        
+        <dl>
+          <dt><label for="name_field">First Name</label></dt>
+          <dd><input type="text" name="name_field" id="name_field" required></dd>
+        
+          <dt><label for="last_field">Last Name</label></dt>
+          <dd><input type="text" name="last_field" id="last_field"  required></dd>
+        
+          <dt><label for="email_field">Email</label></dt>
+          <dd><input type="email" name="email_field" id="email_field" required></dd>
+        
+          <dt><label for="phone_field">Phone Number</label></dt>
+          <dd><input type="tel" name="phone_field" id="phone_field" placeholder="###-###-####" required></dd>          
+          
+          <dt><label for="phone_type">Phone Type</label></dt>
+          <dd><select name="phone_type" id="phone_type">
+            <option selected>Home</option>
+            <option>Cell</option>
+            <option>Business</option>
+          </select>
+
+          <dt><label for="optional_message">Optional Message</label></dt>
+          <dd><textarea name="optional_message" id="optional_message" placeholder="Type your message here" cols="80" rows="6"></textarea></dd>
+        </dd>
+        
+        </dl>
+        
+        <input type="submit" value="Send" />
+       
+      </fieldset>
+    </form>
+  </body>
+</html>

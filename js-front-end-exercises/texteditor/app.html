@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rich Text Editor</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <h1>Rich Text Editor</h1>
+  <div id="editor">
+    <div class="buttons">
+      <button class="bold fa fa-bold" data-command="bold"></button>
+      <button class="italicize fa fa-italic" data-command="italic"></button>
+      <button class="underline fa fa-underline" data-command="underline"></button>
+      <button class="strikethrough fa fa-strikethrough" data-command="strikeThrough"></button>
+      <button class="link fa fa-link" data-command="createLink"></button>
+      <button class="ul fa fa-list-ul" data-command="insertUnorderedList"></button>
+      <button class="ol fa fa-list-ol" data-command="insertOrderedList"></button>
+      <button class="al_left fa fa-align-left" data-command="justifyLeft"></button>
+      <button class="al_right fa fa-align-right" data-command="justifyRight"></button>
+      <button class="al_center fa fa-align-center" data-command="justifyCenter"></button>
+      <button class="al_justify fa fa-align-justify" data-command="justifyFull"></button>
+    </div>
+    <div class="text_box" contenteditable="true"></div>
+
+    <script src="app.js"></script>
+  </div>
+</body>
+</html>

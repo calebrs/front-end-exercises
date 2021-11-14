@@ -1,0 +1,67 @@
+body {
+  background: #55f;
+}
+h1 {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+#editor {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #ccc;
+  font-family: Helvetica, Arial, 'sans-serif';
+  margin: 30px auto;
+}
+.buttons {
+  height: 30px;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Times New Roman', serif;
+  background: #ccc;
+  padding: 5px 0 0 5px;
+  box-sizing: border-box;
+}
+.text_box {
+  height: 100%;
+  max-height: 470px;
+  overflow: auto;
+  background: #fff;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.fa-bold::before {
+  content: "\f032";
+}
+.fa-italic::before {
+  content: "\f033";
+}
+.fa-underline::before {
+  content: "\f0cd";
+}
+.fa-strikethrough::before {
+  content: "\f0cc";
+}
+link::before {
+  content: "\f0c1";
+}
+.fa-list-ul::before {
+  content: "\f0ca";
+}
+.fa-list-ol::before {
+  content: "\f0cb";
+}
+.fa-align-left::before {
+  content: "\f036";
+}
+.fa-align-right::before {
+  content: "\f038";
+}
+.fa-align-center::before {
+  content: "\f037";
+}
+.fa-align-justify::before {
+  content: "\f039";
+}
+.fa-chain::before, .fa-link::before {
+  content: "\f0c1";
+}

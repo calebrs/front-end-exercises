@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cars for Sale</title>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <link rel="stylesheet" href="whitespace-reset.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header>
+    <h1>Buy Used Cars</h1>
+    <div id="filters"></div>
+  </header>
+  <main>
+    <div id="cars"></div>
+  </main>
+
+  <script id="filters_template" type="text/x-handlebars-template">
+      <label for="make_select">Make</label>
+      <select name="make" id="make_select">
+        <option value="">All</option>
+        {{#each makes}}
+          <option value="{{.}}">{{.}}</option>
+        {{/each}}
+      </select>
+
+      <label for="model_select">Model</label>
+      <select name="model" id="model_select">
+        <option value="">All</option>
+        {{#each models}}
+          <option value="{{.}}">{{.}}</option>
+        {{/each}}
+      </select>
+
+      <label for="price_select">Price</label>
+      <select name="price" id="price_select">
+        <option value="">Any</option>
+        {{#each prices}}
+          <option value="{{.}}">{{.}}</option>
+        {{/each}}
+      </select>
+
+      <label for="year_select">Year</label>
+      <select name="year" id="year_select">
+        <option value="">Any</option>
+        {{#each years}}
+          <option value="{{.}}">{{.}}</option>
+        {{/each}}
+      </select>
+
+      <button class="filter_btn">Filter</button>
+  </script>
+
+  <script id="cars_template" type="text/x-handlebars-templates">
+    {{#each cars}}
+      {{> car_template}}
+    {{/each}}
+  </script>
+
+  <script id="car_template" type="text/x-handlebars-templates">
+    <div class="car">
+      <figure>
+        <img src="{{image}}">
+      </figure>
+      <h2>{{make}} {{model}}</h2>
+      <p class="year">Year: {{year}}</p>
+      <p class="price">Price: ${{price}}</p>
+      <a href="#">Buy</a>
+    </div>
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>

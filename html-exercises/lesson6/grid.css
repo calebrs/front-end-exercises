@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: white;
+  color: black;
+  font: normal 24px Helvetica, Arial, sans-serif;
+}
+
+header, h1 {
+  background-color: blue;
+  color: white;
+}
+
+header {
+  grid-area: header;
+  padding: 1rem;
+  text-align: center;
+}
+
+body {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-areas: 
+    "header header header"
+    "nav  nav nav"
+    "sidebar1 article1 sidebar2"
+    "sidebar3 article2 article2"
+    "footer footer footer";
+}
+
+nav {
+  grid-area: nav;
+  background-color: cyan;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+li {
+  text-align: center;
+  width: auto;
+}
+
+a {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 1rem 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+a:focus,
+a:hover {
+  background-color: blue;
+  color: yellow;
+}
+
+article,
+aside {
+  padding: 0 1rem;
+}
+
+aside {
+  background-color: lightgreen;
+}
+
+#aside-1 {
+  grid-area: sidebar1;
+}
+
+#aside-2 {
+  grid-area: sidebar2;
+}
+
+#aside-3 {
+  grid-area: sidebar3;
+  background-color: pink;
+}
+
+#article-1 {
+  grid-area: article1;
+}
+
+#article-2 {
+  grid-area: article2;
+  background-color: skyblue;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+footer {
+  display: grid;
+  grid-template-areas: "logo copyright";
+  grid-template-columns: 1fr 3fr;
+  grid-area: footer;
+  background-color: yellow;
+}
+
+#copyright {
+  grid-area: copyright;
+  margin: 0 1rem;
+  align-self: center;
+  justify-self: end;
+}
+
+#logo {
+  grid-area: logo;
+  background-color: orange;
+  
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}

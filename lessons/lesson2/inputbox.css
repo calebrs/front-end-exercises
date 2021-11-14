@@ -1,0 +1,24 @@
+.text-field {
+  border: solid 1px #ccc;
+  padding: 1em;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 18px;
+  overflow: hidden;
+  width: 300px; 
+}
+
+.text-field .content {
+  display: inline-block;
+  height: 21px;
+  float: left;
+  white-space: pre;
+}
+
+.text-field.focused {
+  border-color: black;
+}
+
+.text-field.cursor .content {
+  border-right: solid 2px black;
+}

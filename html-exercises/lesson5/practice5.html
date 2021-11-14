@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Form Practice 5</title>
+    <meta charset="utf-8" />
+    <style>
+      ul {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <form action="#" method="GET">
+      <fieldset>
+        <h1>Catagory</h1>
+        <select name="catagory">
+          <option>Core</option>
+          <option>Plugins and Libraries</option>
+          <option>Conventions</option>
+          <option>Reviews</option>
+          <option>Opinion</option>
+          <option>People</option>
+        </select>
+
+        <h2>Tags</h2>
+        <select multiple name="tags" size="5">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option>Javascript</option>
+          <option>Ruby</option>
+          <option>Rails</option>
+          <option>Python</option>
+          <option>Django</option>
+        </select>
+
+        <input type="submit" value="Filter">
+        <input type="reset" value="Clear form">
+      </fieldset>
+    </form>
+  </body>
+</html>

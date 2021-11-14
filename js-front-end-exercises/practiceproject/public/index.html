@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/handlebars.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+  
+  
+</head>
+<body>
+  <header>
+    <h1>Contact Manager</h1>
+  </header>
+  <main>
+    <div class="top">
+      <button class="add_contact">Add contact</button>
+      <input id="search" type="text" placeholder="search">
+      
+      <form action="#" id="filter">
+        <label for="family">
+          <input type="checkbox" name="tags" value="family"/>
+          Family
+        </label>
+        
+        <label for="friend">
+          <input type="checkbox" name="tags" value="friend"/>
+          Friend
+        </label>
+        
+        <label for="school">
+          <input type="checkbox" name="tags" value="school"/>
+          School
+        </label>
+        
+        <label for="work">
+          <input type="checkbox" name="tags" value="work"/>
+          Work
+        </label>
+      </form>
+        
+
+      
+    </div>
+    <div class="contacts">
+      <h2>There are no contacts</h2>
+      <button class="add_contact">Add Contact</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Created by Caleb R Smith</p>
+  </footer>
+
+  <div class="mask hidden" id="add">
+    <div id="new_contact" class="form-div">
+      <form id="add_contact_form" action="http://localhost:3000/api/contacts/" method="POST">
+        <fieldset>
+          <h2>Add Contact</h2>
+          <span class="form_errors"></span>
+          <dl>
+            <dt>
+              <label for="full_name">Full Name</label>
+              <span class="error_message"></span>
+            </dt>
+            <dd>
+              <input type="text" name="full_name" required>
+            </dd>
+            <dt>
+              <label for="email">Email</label>
+              <span class="error_message"></span>
+            </dt>
+            <dd>
+              <input type="text" name="email" required placeholder="someone@example.com" pattern=".+@.+">
+            </dd>
+            <dt>
+              <label for="phone_number">Phone Number</label>
+              <span class="error_message"></span>
+            </dt>
+            <dd>
+              <input type="text" name="phone_number" required pattern="\d{3}-\d{3}-\d{4}" placeholder="111-222-3333">
+            </dd>
+            <dt>
+              <label for="tags">Tags</label>
+              <span class="error_message"></span>
+            </dt>
+            <dd>
+              <div id="tags">
+                <label for="family">
+                  <input type="checkbox" name="tags" value="family"/>
+                  Family
+                </label>
+                
+                <label for="friend">
+                  <input type="checkbox" name="tags" value="friend"/>
+                  Friend
+                </label>
+                
+                <label for="school">
+                  <input type="checkbox" name="tags" value="school"/>
+                  School
+                </label>
+                
+                <label for="work">
+                  <input type="checkbox" name="tags" value="work"/>
+                  Work
+                </label>
+        
+              </div>
+            </dd>
+          </dl>
+          <button type="submit">Submit</button>
+          <button type="cancel">Cancel</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <div class="mask hidden" id="edit">
+    <div class="form-div">
+      <form id="edit_contact_form" action="http://localhost:3000/api/contacts/" method="PUT">
+        <fieldset>
+          <h2>Edit Contact</h2>
+          <span class="form_errors"></span>
+          <dl>
+            <dt>
+              <label for="full_name">Full Name</label><span class="error_message"></span>
+            </dt>
+            <dd>
+              <input type="text" name="full_name" required>            
+            </dd>
+            <dt>
+              <label for="email">Email</label><span class="error_message"></span>
+            </dt>
+            <dd>
+              <input type="text" name="email" required placeholder="someone@example.com" pattern=".+@.+">             
+            </dd>
+            <dt>
+              <label for="phone_number">Phone Number</label><span class="error_message"></span>
+            </dt>
+            <dd>
+              <input type="text" name="phone_number" required pattern="\d{3}-\d{3}-\d{4}" placeholder="111-222-3333">
+            </dd>
+            <dt>
+              <label for="tags">Tags (optional)</label><span class="error_message"></span>
+            </dt>
+            <dd>
+              <div id="tags">
+                <label for="family">
+                  <input type="checkbox" name="tags" value="family"/>
+                  Family
+                </label>
+                
+                <label for="friend">
+                  <input type="checkbox" name="tags" value="friend"/>
+                  Friend
+                </label>
+                
+                <label for="school">
+                  <input type="checkbox" name="tags" value="school"/>
+                  School
+                </label>
+                
+                <label for="work">
+                  <input type="checkbox" name="tags" value="work"/>
+                  Work
+                </label>
+        
+              </div>  
+            </dd>            
+          </dl>
+          <button type="submit">Submit</button>
+          <button type="cancel">Cancel</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <script type="text/x-handlebars-template" id="contact_template">
+    <div class="contact" data-id="{{id}}">
+      <h2 class="name">{{full_name}}</h2>
+      <ul>
+        <li class="phone">Phone: {{phone_number}}</li>
+        <li class="email">Email: {{email}}</li>
+        <li class="tags">Tags: {{tags}}</li>
+      </ul>
+      <button class="delete">Delete</button>
+      <button class="edit">Edit</button>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars-template" id="contacts_template">
+    {{#each contacts}}
+      {{> contact_template}}
+    {{/each}}
+  </script>
+
+  <script type="application/javascript" src="javascripts/app.js"></script>
+</body>
+</html>

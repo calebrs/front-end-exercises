@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="whitespace-reset.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <h1>Sign up Form</h1>
+  <form action="#" method="post" novalidate>
+    <p class="form_errors"></p>
+    <fieldset>
+      <dl>
+        <dt>
+          <label for="first_name">First Name</label>
+        </dt>
+        <dd>
+          <input type="text" id="first_name" name="first_name" required>
+          <span class="error_message"></span>
+        </dd>
+
+        <dt>
+          <label for="last_name">Last Name</label>
+        </dt>
+        <dd>
+          <input type="text" id="last_name" name="last_name" required>
+          <span class="error_message"></span>
+        </dd>
+
+        <dt>
+          <label for="email">Email</label>
+        </dt>
+
+        <dd>
+          <input type="text" required name="email" id="email"
+          placeholder="someone@example.com" pattern=".+@.+">
+          <span class="error_message"></span>
+        </dd>
+
+        <dt>
+          <label for="password">Password</label>
+        </dt>
+
+        <dd>
+          <input type="password" name="password" id="password" pattern=".{10,}" required>
+          <span class="error_message"></span>
+        </dd>
+
+        <dt>
+          <label for="phone">Phone Number</label>
+        </dt>
+
+        <dd>
+          <input type="text" name="phone" id="phone" pattern="\d{3}-\d{3}-\d{4}"
+          placeholder="111-222-3333">
+          <span class="error_message"></span>
+        </dd>
+
+        <button type="submit">Sign Up</button>
+      </dl>
+    </fieldset>
+  </form>
+  <script src="app.js"></script>
+</body>
+</html>

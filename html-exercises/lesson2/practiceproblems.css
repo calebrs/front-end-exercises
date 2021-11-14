@@ -1,0 +1,22 @@
+body {
+  margin: 50px;
+}
+
+ul {
+  background-color: #a7ceff;
+  border: 10px solid blue;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  background-color: #ffc;
+  border: 10px solid red;
+  box-sizing: border-box;
+  line-height: 120px;
+  min-height: 120px;
+  width: 23%;
+  text-align: center;
+  margin: 0 1%;
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <style>
+      a.test {
+          font-weight: bold;
+      }
+      </style>
+</head>
+<body>
+    <form action="#">
+      <input type="text" maxlength="1">
+      <button type="submit">Submit</button>
+    </form>
+    <a href="">Toggle accordian</a>
+    <div id="accordian">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla justo a elit efficitur volutpat. Suspendisse eu efficitur nulla. Etiam non enim vel urna semper laoreet sed a tortor. Quisque nec bibendum nisi, ac ornare ex. Duis aliquam tellus vel finibus luctus. Phasellus ac nisi magna. Sed vitae massa sit amet augue tempus maximus. Nunc rutrum, felis ornare facilisis fermentum, sem nisl facilisis eros, a auctor augue justo non nulla. Sed id metus non urna porttitor dapibus. Donec aliquet lectus a molestie congue. Vivamus aliquet mattis dapibus. Etiam lobortis tempus nisl non venenatis. Nunc nec diam non justo vestibulum dictum elementum ut felis. 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+      $(function() {
+        let $form = $('form');
+        let $a = $('a');
+
+        $a.click(event => {
+          event.preventDefault();
+          $('#accordian').slideToggle();
+        });
+
+        $form.submit(event => {
+          event.preventDefault();
+          let $input = $(this).find("input[type=text]").val();
+
+          $(document).off('keypress').on('keypress', function(e) {
+            if (e.key !== $input) {
+              return;
+            }
+            $a.trigger('click');
+          });
+        });
+      });
+
+      
+      
+ 
+    </script>
+</body>
+</html>

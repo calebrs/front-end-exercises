@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Walkthrough Project</title>
+    <meta charset="utf-8" />
+    <style>
+
+      body {
+        font: normal 16px Helvetica, Arial, sans-serif;
+      }
+      fieldset {
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        width: 600px;
+      }
+
+      h1 {
+        box-sizing: border-box;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      h4 {
+        box-sizing: border-box;
+        font-weight: normal;
+      }
+
+      dl {
+        box-sizing: border-box;
+        margin-bottom: 0;
+        padding: 0;
+      }
+
+      div {
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+
+      dt {
+        box-sizing: border-box;
+        margin-bottom: 5px;
+      }
+
+      dd {
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"], input[type="email"] {
+        box-sizing: border-box;
+        height: 30px;
+        width: 100%;
+        padding: 0 10px;
+        border: 1px solid;
+      }
+
+      input[type="reset"], input[type="submit"] {
+        margin: 0;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      .partial {
+        display: inline-block;
+      }
+
+      .one_half {
+        width: 50%;
+      }
+
+      .right {
+        padding-right: 5px;
+      }
+
+      .left {
+        padding-left: 5px;
+      }
+
+      .middle {
+        padding: 0 10px;
+      }
+
+      .city {
+        width: 50%;
+      }
+
+      .state {
+        width: 10%;
+      }
+
+      .zip {
+        width: 40%;
+      }
+
+    </style>
+  </head>
+  
+  <body>
+    <form action="#" method="POST">
+      <fieldset>
+        <h1>Get-to-know-you form</h1>
+        <dl class="partial one_half right">
+          <dt><label for="first_name">First Name</label></dt>
+          <dd><input type="text" name="first_name" id="first_name"></dd>
+        </dl><!--
+        --><dl class="partial one_half left">
+          <dt><label for="last_name">Last Name</label></dt>
+          <dd><input type="text" name="last_name" id="last_name"></dd>
+        </dl>
+        <dl>
+          <dt><label for="email">Email Address</label></dt>
+          <dd><input type="email" name="email" id="email" placeholder="example@gmail.com"></dd>
+        </dl>
+        <dl class="partial left city">
+          <dt><label for="city">City</label></dt>
+          <dd><input type="text" name="city" id="city"></dd>
+        </dl><!--
+        --><dl class="partial middle state">
+          <dt><label for="state">State</label></dt>
+          <dd>  
+            <select name="state" id="state">
+              <option value="AL">AL</option>
+	            <option value="AK">AK</option>
+	            <option value="AR">AR</option>	
+	            <option value="AZ">AZ</option>
+	            <option value="CA">CA</option>
+	            <option value="CO">CO</option>
+	            <option value="CT">CT</option>
+	            <option value="DC">DC</option>
+	            <option value="DE">DE</option>
+	            <option value="FL">FL</option>
+	            <option value="GA">GA</option>
+	            <option value="HI">HI</option>
+	            <option value="IA">IA</option>	
+	            <option value="ID">ID</option>
+	            <option value="IL">IL</option>
+	            <option value="IN">IN</option>
+	            <option value="KS">KS</option>
+	            <option value="KY">KY</option>
+	            <option value="LA">LA</option>
+	            <option value="MA">MA</option>
+	            <option value="MD">MD</option>
+	            <option value="ME">ME</option>
+	            <option value="MI">MI</option>
+	            <option value="MN">MN</option>
+	            <option value="MO">MO</option>	
+	            <option value="MS">MS</option>
+	            <option value="MT">MT</option>
+	            <option value="NC">NC</option>	
+	            <option value="NE">NE</option>
+	            <option value="NH">NH</option>
+	            <option value="NJ">NJ</option>
+	            <option value="NM">NM</option>			
+	            <option value="NV">NV</option>
+	            <option value="NY">NY</option>
+	            <option value="ND">ND</option>
+	            <option value="OH">OH</option>
+	            <option value="OK">OK</option>
+	            <option value="OR">OR</option>
+	            <option value="PA">PA</option>
+	            <option value="RI">RI</option>
+	            <option value="SC">SC</option>
+	            <option value="SD">SD</option>
+	            <option value="TN">TN</option>
+	            <option value="TX">TX</option>
+	            <option value="UT">UT</option>
+	            <option value="VT">VT</option>
+	            <option value="VA">VA</option>
+	            <option value="WA">WA</option>
+	            <option value="WI">WI</option>	
+	            <option value="WV">WV</option>
+	            <option value="WY">WY</option>
+            </select>
+          </dd>
+        </dl><!--
+        --><dl class="partial right zip">
+          <dt><label for="zip">Zip</label></dt>
+          <dd><input type="text" name="zip" id="zip" maxlength="5" minlength="5" placeholder="#####"></dd>
+        </dl>
+        <div>
+          <h4>What color do you prefer?</h4>
+          <label>
+            <input type="radio" name="color" value="red" checked>
+            Red
+          </label>
+          <label>
+            <input type="radio" name="color" value="yellow">
+            Yellow
+          </label>
+          <label>
+            <input type="radio" name="color" value="Blue">
+            Blue
+          </label>
+        </div>
+        <div>
+          <h4>Which Web Technology do you want to learn?</h4>
+          <label>
+            <input type="checkbox" name="tech" value="html">
+            HTML
+          </label>
+          <label>
+            <input type="checkbox" name="tech" value="css">
+            CSS
+          </label>
+          <label>
+            <input type="checkbox" name="tech" value="javascript">
+            Javascript
+          </label>
+          <label>
+            <input type="checkbox" name="tech" value="ruby">
+            Ruby
+          </label>
+          <label>
+            <input type="checkbox" name="tech" value="rails">
+            Rails
+          </label>
+        </div>
+        <dl>
+          <dt><label for="comment">Comments</label></dt>
+          <dd><textarea name="comment" id="comment" cols="80" rows="6"></textarea></dd>
+        </dl>
+
+        <input type="submit" value="Send">
+        <input type="reset">
+        
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+body {
+  background: #226543;
+  padding: 20px;
+  color: #000;
+  font-size: 18px;
+}
+h2 {
+  color: #fff;
+}
+#todos {
+  list-style: none;
+  width: 600px;
+}
+#todos li {
+  padding: 16px 20px 0 20px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #222;
+  height: 50px;
+  margin-bottom: 20px;
+  text-indent: 0;
+  border-radius: 5px;
+  position: relative;
+}
+.overlay {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.confirm_prompt {
+  display: none;
+  width: 500px;
+  height: 150px;
+  position: absolute;
+  z-index: 10;
+  top: 150px;
+  left: 50%;
+  margin-left: -200px;
+  border: 1px solid #ccc;
+  background: #eee;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.context_menu {
+  display: none;
+  width: 200px;
+  background: #ccc;
+  border-radius: 4px;
+}
+.context_menu ul {
+  list-style: none;
+  padding: 0px;
+}
+.context_menu li {
+  margin-left: 0;
+  height: 30px;
+  border-top: 1px solid #fff;
+  padding: 12px 0 0 10px;
+  cursor: pointer;
+}
+.context_menu li:first-child {
+  border-top: none;
+}
+.context_menu ul {
+  list-style: none;
+}
+.confirm_prompt .actions {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+a.confirm_yes {
+  background: #9f1331;
+}
+a.confirm_no {
+  background: #289f37;
+}
+.context_menu li:hover {
+  background: #bbb;
+  color: #fff;
+}
+.confirm_prompt .actions a {
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+  text-align: center;
+  padding-top: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+}

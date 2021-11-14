@@ -1,0 +1,27 @@
+body {
+  background: #999900;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+}
+#languages {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 4px;
+}
+.more {
+  display: inline-block;
+  text-decoration: none;
+  background: #990;
+  color: #fff;
+  text-align: center;
+  width: 90px;
+  border-radius: 4px;
+}
+a {
+  cursor: pointer;
+}

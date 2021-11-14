@@ -1,0 +1,167 @@
+@import "whitespace-reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+html {
+  font: normal 18px "Nunito Sans", sans-serif;
+}
+
+body {
+  background: url(bg_body.gif) repeat;
+}
+
+header {
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header img {
+  margin: 135px 0 125px;
+}
+
+header li {
+  display: inline-block;
+  padding: 0 45px;
+}
+
+header ul {
+  text-align: center;
+  margin: 0 0 50px;
+  font-size: 26px;
+}
+
+header a {
+  text-decoration: none;
+  color: #cacaca;
+}
+
+nav a.active {
+  font-weight: bolder;
+  color: #6db9ff;
+}
+
+main {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+  padding: 120px 0 75px;
+}
+
+main article img {
+  margin: 40px 0 60px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0 0 40px;
+}
+
+h2::before,
+h2::after {
+  display: inline-block;
+  padding: 0 24px;
+  font-size: 22px;
+  vertical-align: 5px;
+  content: "\2022";
+}
+
+p {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+}
+
+main p {
+  margin: 0 90px;
+}
+
+footer p {
+  color: #b1b1b1;
+}
+
+article {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.founder_text {
+  margin: 78px 0 46px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #3e59b2;
+  margin-bottom: 26px;
+}
+
+footer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #e7e7e7;
+  padding: 88px 0 76px;
+}
+
+footer ul {
+  box-sizing: border-box;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0 62px;
+}
+
+footer li a {
+  display: block;
+  background: transparent url(icons_social-media.png) 0 0 no-repeat;
+  height: 46px;
+  width: 46px;
+  overflow: hidden;
+  text-indent: -8685px;
+}
+
+footer li a.twitter {
+  background-position: 0 0;
+}
+
+footer li a.facebook {
+  background-position: 0 -46px;
+}
+
+footer li a.email {
+  background-position: 0 -92px;
+}
+
+footer li a.instagram {
+  background-position: 0 -138px;
+}
+
+main ul {
+  text-align: center;
+  box-sizing: border-box;
+  margin: 135px 0 140px;
+}
+
+main li {
+  display: inline-block;
+  font-size: 24px;
+}
+
+main li a {
+  text-decoration: none;
+}
+
+main li img {
+  display: block;
+  padding: 0 30px 30px;
+}

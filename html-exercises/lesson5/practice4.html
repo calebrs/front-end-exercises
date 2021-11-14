@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Form practice 4</title>
+    <meta charset="utf-8" />
+  </head>
+  
+  <body>
+    <form action="#" method="POST">
+      <fieldset>
+        <dl>
+          <dt><label for="movie">Movie</label></dt>
+          <dd><select name="movie" id="movie" size="4">
+            <option>Looper</option>
+            <option>Frozen</option>
+            <option>Tommy Boy</option>
+            <option value="Alien" selected>Alien</option>
+          </select></dd>
+
+          <dt><label for="rating">Rating</label></dt>
+          <dd><input type="number" id="rating" min="0" max="5"></dd>
+
+          <label>
+            <input type="checkbox">
+            Add to my favorites
+          </label>
+
+        </dl>
+
+        <input type="submit" value="rate movie">
+      </fieldset>
+    </form>
+  </body>
+</html>

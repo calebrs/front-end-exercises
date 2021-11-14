@@ -1,0 +1,42 @@
+body {
+  background: #22596e;
+}
+#calculator {
+  width: 350px;
+  height: 430px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 4px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+#screen {
+  height: 120px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  text-align: right;
+  position: relative;
+}
+#screen .current_num {
+  font-size: 36px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin: 0px;
+}
+#buttons a {
+  width: 82px;
+  height: 53px;
+  background: #ccc;
+  box-sizing: border-box;
+  padding: 15px 0 0 0;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  margin-top: 5px;
+  font-size: 18px;
+  border-radius: 4px;
+}
